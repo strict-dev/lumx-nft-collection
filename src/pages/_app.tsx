@@ -1,13 +1,12 @@
+import '../styles/global.css'
 import type { AppProps } from 'next/app'
-import GlobalStyle from '../styles/globalStyles'
-import { StyledThemeProvider } from 'context/ThemeContext'
+import { RecoilRoot } from 'recoil'
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps: { ...pageProps } }: AppProps) {
   return (
-    <StyledThemeProvider>
+    <RecoilRoot>
       <Component {...pageProps} />
-      <GlobalStyle />
-    </StyledThemeProvider>
+    </RecoilRoot>
   )
 }
 
