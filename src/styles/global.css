@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .brand-gradient {
+    @apply bg-gradient-to-r from-primary-one to-primary-two
+  }
+}
+
+@layer base {
+  body {
+    @apply text-white;
+  }
+}
