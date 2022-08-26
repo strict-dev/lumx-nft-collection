@@ -26,10 +26,10 @@
       "@services/*": ["src/services/*"],
       "@styles/*": ["src/styles/*"],
       "@styles": ["src/styles"],
-      "@public/*": ["public/*"],
-      "@public": ["public"],
       "@test/*": ["test/*"],
-      "@test": ["test"]
+      "@test": ["test"],
+      "@public": ["../public"],
+      "@public/*": ["../public/*"],
     },
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
