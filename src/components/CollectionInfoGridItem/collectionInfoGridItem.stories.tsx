@@ -1,8 +1,20 @@
-import { Story, Meta } from '@storybook/react'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
+
 import CollectionInfoGridItem from '.'
+
 export default {
   title: 'CollectionInfoGridItem',
   component: CollectionInfoGridItem
-} as Meta
+} as ComponentMeta<typeof CollectionInfoGridItem>
 
-export const Default: Story = () => <CollectionInfoGridItem />
+const Template: ComponentStory<typeof CollectionInfoGridItem> = (args) => (
+  <CollectionInfoGridItem {...args} />
+)
+
+export const Default = Template.bind({})
+
+Default.args = {
+  type: 'vol',
+  title: 'Volume',
+  data: '1,000'
+}

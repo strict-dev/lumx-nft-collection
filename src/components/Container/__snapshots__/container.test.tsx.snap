@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Container /> should render the heading 1`] = `
+<div
+  class="mx-4 "
+>
+  Hello
+</div>
+`;

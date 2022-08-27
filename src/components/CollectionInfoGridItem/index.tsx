@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import MenuIcon from '@public/assets/menu-1.svg'
+import Image from 'next/image'
 
 type CollectionInfoGridItem = {
   title: string

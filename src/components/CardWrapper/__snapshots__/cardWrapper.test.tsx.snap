@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardWrapper /> should render the heading 1`] = `
+<div
+  class="p-3 rounded-sm bg-neutral-800 undefined"
+>
+  Hello
+</div>
+`;

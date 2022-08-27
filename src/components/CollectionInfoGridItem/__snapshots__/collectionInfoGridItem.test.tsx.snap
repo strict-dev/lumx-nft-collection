@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CollectionInfoGridItem /> should render the heading 1`] = `
+<div
+  class="flex flex-col items-center justify-center gap-1 box"
+>
+  <p
+    class="text-xs font-bold text-neutral-600"
+  >
+    VOL
+  </p>
+  <div
+    class="flex items-center gap-1"
+  >
+    <span
+      class="text-lg font-bold"
+    >
+      1000
+    </span>
+  </div>
+</div>
+`;
