@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 type CollectionInfoGridItem = {
   title: string
-  data: string
+  data: string | undefined
   children?: React.ReactNode
   type?: 'vol'
 }
