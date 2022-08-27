@@ -1,19 +1,18 @@
 import UserPhoto from '@public/assets/bored-img.svg'
+import CopyIcon from '@public/assets/icn-copy.svg'
 import MonitorIcon from '@public/assets/icn-monitor-list.svg'
 import OpenSeaIcon from '@public/assets/icn-opensea-list.svg'
 import EtherScanIcon from '@public/assets/icon-etherscan-list.svg'
-import CopyIcon from '@public/assets/icn-copy.svg'
 import TrendingUpIcon from '@public/assets/trending-up.svg'
-
+import CardWrapper from 'components/CardWrapper'
+import CollectionInfoGridItem from 'components/CollectionInfoGridItem'
+import Container from 'components/Container'
 import Image from 'next/image'
 import { data } from 'utils/mock'
-import CollectionInfoGridItem from 'components/CollectionInfoGridItem'
-import CardWrapper from 'components/CardWrapper'
-import Container from 'components/Container'
 
 const CollectionInfo = () => {
   return (
-    <Container>
+    <Container className="pt-20 ">
       <CardWrapper className="mb-14">
         <div className="relative flex items-center justify-between gap-2 pb-4">
           <div className="flex items-center justify-between gap-2">
@@ -52,9 +51,9 @@ const CollectionInfo = () => {
               height={32}
             />
           </div>
-
-          <div className="absolute bottom-0 left-0 w-full border-b border-b-neutral-700" />
         </div>
+
+        <hr className="border-neutral-700" />
 
         <div className="grid grid-flow-row grid-cols-3 grid-rows-2 gap-2 pt-4">
           <CollectionInfoGridItem title={'lifetime'} data={data.lifetime} />
