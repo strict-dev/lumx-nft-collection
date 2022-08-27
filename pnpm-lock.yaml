@@ -53,6 +53,7 @@ specifiers:
   react-chartjs-2: ^4.3.1
   react-content-loader: ^6.2.0
   react-dom: 18.2.0
+  react-spinners: ^0.13.4
   recoil: ^0.7.5
   storybook: ^6.5.9
   styled-components: ^5.3.5
@@ -69,6 +70,7 @@ dependencies:
   react-chartjs-2: 4.3.1_2unjvz6v6rskedwoxtmbfw2rje
   react-content-loader: 6.2.0_react@18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-spinners: 0.13.4_biqbaboplfbrettd7655fr4n2y
   recoil: 0.7.5_biqbaboplfbrettd7655fr4n2y
   styled-components: 5.3.5_biqbaboplfbrettd7655fr4n2y
 
@@ -13003,6 +13005,16 @@ packages:
     resolution: {integrity: sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /react-spinners/0.13.4_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-V6IURjYOwomhdngMfuVxBp4utCF6v21sjQ6r4K2JoKl8fwXZp1UeHMBLf+2SU+cts8hAVj9rHOJ8kdT5UqqaJw==}
+    peerDependencies:
+      react: ^16.0.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
 
   /react-syntax-highlighter/15.5.0_react@18.2.0:
     resolution: {integrity: sha512-+zq2myprEnQmH5yw6Gqc8lD55QHnpKaU8TOcFeC/Lg/MQSs8UknEA0JC4nTZGFAXC2J2Hyj/ijJ7NlabyPi2gg==}
