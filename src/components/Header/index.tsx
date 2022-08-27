@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const Header = () => {
   return (
-    <div className="fixed z-50 flex items-center justify-between w-full p-4 mb-6 border-b h-14 bg-neutral-800 border-b-neutral-700">
+    <header className="fixed z-50 flex items-center justify-between w-full p-4 mb-6 border-b h-14 bg-neutral-800 border-b-neutral-700">
       <div className="flex items-center justify-between gap-4">
         <Image src={Logo} alt="Logo" width={24} height={24} />
         <div className="flex gap-1">
@@ -14,15 +14,21 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between gap-4">
-        <button>
-          <Image src={SearchIcon} alt="Search" width={24} height={24} />
-        </button>
-        <button>
-          <Image src={MenuIcon} alt="Menu" width={24} height={24} />
-        </button>
-      </div>
-    </div>
+      <nav>
+        <ul className="flex items-center justify-between gap-4">
+          <li>
+            <button>
+              <Image src={SearchIcon} alt="Search" width={24} height={24} />
+            </button>
+          </li>
+          <li>
+            <button>
+              <Image src={MenuIcon} alt="Menu" width={24} height={24} />
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
   )
 }
 
