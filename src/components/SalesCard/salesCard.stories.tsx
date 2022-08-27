@@ -1,5 +1,7 @@
-import { Story, Meta } from '@storybook/react'
+import { Meta, Story } from '@storybook/react'
+
 import SalesCard from '.'
+
 export default {
   title: 'SalesCard',
   component: SalesCard

@@ -1,12 +1,25 @@
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { render, screen } from '@testing-library/react'
+import { RecoilRoot } from 'recoil'
+
 import SalesCard from '.'
 
 describe('<SalesCard />', () => {
   it('should render the heading', () => {
-    const { container } = render(<SalesCard />)
+    const queryClient = new QueryClient()
 
-    expect(screen.getByRole('heading', { name: /SalesCard/i })).toBeInTheDocument()
+    const { container } = render(
+      <QueryClientProvider client={queryClient}>
+        <RecoilRoot>
+          <SalesCard />
+        </RecoilRoot>
+      </QueryClientProvider>
+    )
 
-    expect(container.firstChild).toMatchSnapshot()
+    expect(
+      screen.getByRole('heading', {
+        name: /sales/i
+      })
+    ).toBeInTheDocument()
   })
 })
