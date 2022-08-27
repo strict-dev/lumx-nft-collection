@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SalesCard /> should render the heading 1`] = `
+<div
+  class="pb-60"
+>
+  <div
+    class="mx-4 "
+  >
+    <div
+      class="p-3 rounded-sm bg-neutral-800 flex flex-col gap-5 mb-2"
+    >
+      <div
+        class="flex flex-col gap-3"
+      >
+        <div
+          class="flex items-center justify-between"
+        >
+          <h2
+            class="text-lg font-bold"
+          >
+            Sales
+          </h2>
+          <p
+            class="text-sm font-bold text-neutral-600"
+          >
+            Showing undefined sales
+          </p>
+        </div>
+        <div
+          class="flex items-center justify-between"
+        >
+          <p
+            class="text-xs font-bold text-neutral-700"
+          >
+            Time:
+          </p>
+          <div>
+            <button
+              class="px-4 py-2 font-bold rounded-sm 
+                  transition duration-300 
+                  bg-neutral-600 text-white"
+            >
+              24H
+            </button>
+            <button
+              class="px-4 py-2 font-bold rounded-sm text-neutral-600 transition duration-300 
+                  false"
+            >
+              7d
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mx-4 "
+  >
+    <div
+      class="p-3 rounded-sm bg-neutral-800 flex flex-col gap-5 mb-2"
+    >
+      <canvas
+        height="150"
+        role="img"
+        width="300"
+      />
+    </div>
+  </div>
+  <div
+    class="mx-4 "
+  >
+    <div
+      class="p-3 rounded-sm bg-neutral-800 flex flex-col gap-5 mb-2"
+    >
+      <canvas
+        height="150"
+        role="img"
+        width="300"
+      />
+    </div>
+  </div>
+</div>
+`;

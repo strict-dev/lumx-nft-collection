@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Chart /> should render the heading 1`] = `
+<div
+  class="mx-4 "
+>
+  <div
+    class="p-3 rounded-sm bg-neutral-800 flex flex-col gap-5 mb-2"
+  >
+    <canvas
+      height="150"
+      role="img"
+      width="300"
+    />
+  </div>
+</div>
+`;
