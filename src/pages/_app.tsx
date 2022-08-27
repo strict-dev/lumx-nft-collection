@@ -1,13 +1,18 @@
 import '../styles/global.css'
 
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import type { AppProps } from 'next/app'
 import { RecoilRoot } from 'recoil'
 
 function MyApp({ Component, pageProps: { ...pageProps } }: AppProps) {
+  const queryClient = new QueryClient()
+
   return (
-    <RecoilRoot>
-      <Component {...pageProps} />
-    </RecoilRoot>
+    <QueryClientProvider client={queryClient}>
+      <RecoilRoot>
+        <Component {...pageProps} />
+      </RecoilRoot>
+    </QueryClientProvider>
   )
 }
 
