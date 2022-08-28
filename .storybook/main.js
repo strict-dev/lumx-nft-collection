@@ -5,14 +5,24 @@ module.exports = {
     "../src/**/*.stories.mdx",
     "../src/**/*.stories.@(js|jsx|ts|tsx)"
   ],
+  staticDirs: ["../public"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions"
+    "@storybook/addon-interactions",
+    // "@storybook/addon-postcss",
+    // {
+    //   name: "@storybook/addon-postcss",
+    //   options: {
+    //       postcssLoaderOptions: {
+    //       implementation: require("postcss"),
+    //     },
+    //   },
+    // },
   ],
   framework: "@storybook/react",
   core: {
-    "builder": "@storybook/builder-webpack5"
+    builder: "webpack5",
   },
   webpackFinal: async (config, { configType }) => {
     config.resolve.plugins = [new TsconfigPathsPlugin()];

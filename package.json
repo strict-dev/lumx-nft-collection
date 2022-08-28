@@ -12,8 +12,8 @@
     "test:unit": "jest --bail --ci --coverage --passWithNoTests",
     "cz": "czg",
     "prepare": "husky install",
-    "storybook": "start-storybook -s ./public -p 6006",
-    "storybook:build": "build-storybook -s ./public",
+    "storybook": "start-storybook -p 6006",
+    "storybook:build": "build-storybook ",
     "generate": "yarn plop --plopfile ./generators/plopfile.js"
   },
   "dependencies": {
