@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PeriodButton /> should render the heading 1`] = `
+<button
+  class="px-2 py-1 text-sm font-bold transition rounded-sm 
+      brand-gradient text-white
+      text-neutral-600 
+      hover:brightness-110"
+>
+  1D
+</button>
+`;
