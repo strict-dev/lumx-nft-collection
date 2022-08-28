@@ -1,5 +1,6 @@
 import CollectionInfo from 'components/CollectionInfo'
 import Header from 'components/Header'
+import HypeTrend from 'components/HypeTrend'
 import SalesCard from 'components/SalesCard'
 import type { NextPage } from 'next'
 
@@ -9,6 +10,7 @@ const Home: NextPage = () => {
       <Header />
       <CollectionInfo />
       <SalesCard />
+      <HypeTrend />
     </div>
   )
 }
