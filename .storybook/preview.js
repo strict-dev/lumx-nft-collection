@@ -2,7 +2,6 @@ import './global.css';
 import * as NextImage from 'next/image';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { RecoilRoot } from 'recoil';
-import { addParameters } from '@storybook/client-api';
 
 const OriginalNextImage = NextImage.default;
 
@@ -38,7 +37,3 @@ export const parameters = {
   },
   viewMode: 'docs'
 }
-
-addParameters({
-  viewMode: 'docs',
-});
