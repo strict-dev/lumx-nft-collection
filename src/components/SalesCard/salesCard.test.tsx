@@ -8,7 +8,7 @@ describe('<SalesCard />', () => {
   it('should render the heading', () => {
     const queryClient = new QueryClient()
 
-    const { container } = render(
+    render(
       <QueryClientProvider client={queryClient}>
         <RecoilRoot>
           <SalesCard />
