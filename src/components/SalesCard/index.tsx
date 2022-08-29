@@ -1,4 +1,3 @@
-import CardWrapper from 'components/CardWrapper'
 import Container from 'components/Container'
 import { Loader } from 'components/Loader'
 import { useData } from 'hooks/useData'
@@ -13,7 +12,7 @@ const SalesCard = () => {
 
   return (
     <Container>
-      <CardWrapper className="flex flex-col gap-5 mb-2">
+      <div className="flex flex-col gap-5 mb-2">
         <div className="flex flex-col gap-3">
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-bold">Sales</h2>
@@ -45,12 +44,12 @@ const SalesCard = () => {
             </div>
           </div>
         </div>
-      </CardWrapper>
+      </div>
 
       {isLoading ? (
         <Loader size="h-64" />
       ) : (
-        <CardWrapper className="flex flex-col gap-5 mb-2">
+        <div className="flex flex-col gap-5 mb-2">
           <div className="w-full h-32">
             <Chart
               type="scatter"
@@ -116,7 +115,7 @@ const SalesCard = () => {
               }}
             />
           </div>
-        </CardWrapper>
+        </div>
       )}
     </Container>
   )

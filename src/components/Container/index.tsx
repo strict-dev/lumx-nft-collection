@@ -4,7 +4,14 @@ type ContainerProps = {
 }
 
 const Container: React.FC<ContainerProps> = ({ children, className }) => {
-  return <div className={`mx-4 ${className ? className : ''}`}>{children}</div>
+  return (
+    <div
+      className={`p-3 rounded-sm bg-neutral-800 mx-4 
+      ${className ? className : ''}`}
+    >
+      {children}
+    </div>
+  )
 }
 
 export default Container

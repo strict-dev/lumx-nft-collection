@@ -2,7 +2,8 @@
 
 exports[`<Container /> should render the heading 1`] = `
 <div
-  class="mx-4 "
+  class="p-3 rounded-sm bg-neutral-800 mx-4 
+      "
 >
   Hello
 </div>
