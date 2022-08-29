@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker'
 
-const scatterDataset = () => {
-  const dataset = Array.from({ length: 20 }, () => ({
+const scatterDataset = (size: number) => {
+  const dataset = Array.from({ length: size }, () => ({
     x: faker.datatype.number({ min: 0, max: 100 }),
     y: faker.datatype.number({ min: 0, max: 100 })
   }))
@@ -39,9 +39,9 @@ export const data = {
   },
   sales: 2300,
   hypeTrend: 'Very Hyped',
-  scatterDataset1: scatterDataset(),
-  scatterDataset2: scatterDataset(),
-  scatterDataset3: scatterDataset(),
+  scatterDataset1: scatterDataset(100),
+  scatterDataset2: scatterDataset(100),
+  scatterDataset3: scatterDataset(100),
   barsDataset: barsDataset(30),
   lineDataset: barsDataset(10),
   trendingTraits: {
