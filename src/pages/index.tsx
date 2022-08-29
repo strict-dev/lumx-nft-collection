@@ -6,7 +6,7 @@ import type { NextPage } from 'next'
 
 const Home: NextPage = () => {
   return (
-    <div className="min-h-screen bg-neutral-900">
+    <div className="flex flex-col min-h-screen gap-10 bg-neutral-900">
       <Header />
       <CollectionInfo />
       <SalesCard />
