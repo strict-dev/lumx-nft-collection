@@ -1,7 +1,7 @@
 import MenuIcon from '@public/assets/menu-1.svg'
 import Image from 'next/image'
 
-type CollectionInfoGridItem = {
+type CollectionInfoGridItemProps = {
   title: string
   data: string | undefined
   children?: React.ReactNode
@@ -13,7 +13,7 @@ const CollectionInfoGridItem = ({
   data,
   children,
   type
-}: CollectionInfoGridItem) => {
+}: CollectionInfoGridItemProps) => {
   return (
     <div className="flex flex-col items-center justify-center gap-1 box">
       <p className="text-xs font-bold text-neutral-600">
