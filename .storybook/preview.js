@@ -2,6 +2,10 @@ import './global.css';
 import * as NextImage from 'next/image';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { RecoilRoot } from 'recoil';
+import { initialize, mswDecorator } from 'msw-storybook-addon';
+import data from '../src/utils/mock';
+
+initialize();
 
 const OriginalNextImage = NextImage.default;
 
@@ -22,7 +26,7 @@ const withProviders = (StoryFn) => {
   )
 }
 
-export const decorators = [withProviders];
+export const decorators = [withProviders, mswDecorator];
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -35,5 +39,16 @@ export const parameters = {
   previewTabs: {
     'storybook/docs/panel': { index: -1 },
   },
-  viewMode: 'docs'
+  viewMode: 'docs',
+  msw: {
+    handlers: {
+      auth: [
+         rest.get('/api/collections', (req, res, ctx) => {
+            return res(
+              ctx.json(data)
+            )
+         }),
+      ],
+    }
+ }
 }
