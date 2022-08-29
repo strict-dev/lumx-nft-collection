@@ -1,84 +1,28 @@
 import { faker } from '@faker-js/faker'
 
-export const scatterDataset1 = () => {
+const scatterDataset = () => {
   const dataset = {
     datasets: [
-      {
-        label: '',
-        data: Array.from({ length: 20 }, () => ({
+      Array.from({ length: 3 }, () =>
+        Array.from({ length: 20 }, () => ({
           x: faker.datatype.number({ min: 0, max: 100 }),
           y: faker.datatype.number({ min: 0, max: 100 })
-        })),
-        backgroundColor: '#8775D0'
-      },
-      {
-        label: '',
-        data: Array.from({ length: 20 }, () => ({
-          x: faker.datatype.number({ min: 0, max: 100 }),
-          y: faker.datatype.number({ min: 0, max: 100 })
-        })),
-        backgroundColor: '#98BBAF'
-      },
-      {
-        label: '',
-        data: Array.from({ length: 20 }, () => ({
-          x: faker.datatype.number({ min: 0, max: 100 }),
-          y: faker.datatype.number({ min: 0, max: 100 })
-        })),
-        backgroundColor: '#638dff'
-      }
+        }))
+      )
     ]
   }
 
   return dataset
 }
 
-const scatterDataset2 = () => {
+export const barsDataset = (size: number) => {
   const dataset = {
-    datasets: [
-      {
-        label: '',
-        data: Array.from({ length: 20 }, () => ({
-          x: faker.datatype.number({ min: 0, max: 100 }),
-          y: faker.datatype.number({ min: 0, max: 100 })
-        })),
-        backgroundColor: '#8775D0'
-      },
-      {
-        label: '',
-        data: Array.from({ length: 20 }, () => ({
-          x: faker.datatype.number({ min: 0, max: 100 }),
-          y: faker.datatype.number({ min: 0, max: 100 })
-        })),
-        backgroundColor: '#98BBAF'
-      },
-      {
-        label: '',
-        data: Array.from({ length: 20 }, () => ({
-          x: faker.datatype.number({ min: 0, max: 100 }),
-          y: faker.datatype.number({ min: 0, max: 100 })
-        })),
-        backgroundColor: '#638dff'
-      }
-    ]
-  }
-
-  return dataset
-}
-
-export const barsDataset = () => {
-  const dataset = {
-    labels: Array.from({ length: 30 }, () =>
+    x: Array.from({ length: size }, () =>
       faker.datatype.number({ min: 0, max: 10 })
     ),
-    datasets: [
-      {
-        data: Array.from({ length: 30 }, () =>
-          faker.datatype.number({ min: 0, max: 10 })
-        ),
-        backgroundColor: '#D9DBE9'
-      }
-    ]
+    y: Array.from({ length: size }, () =>
+      faker.datatype.number({ min: 0, max: 10 })
+    )
   }
 
   return dataset
@@ -101,7 +45,35 @@ export const data = {
   },
   sales: 2300,
   hypeTrend: 'Very Hyped',
-  scatterDataset1: scatterDataset1(),
-  scatterDataset2: scatterDataset2(),
-  barsDataset: barsDataset()
+  scatterDataset1: scatterDataset(),
+  scatterDataset2: scatterDataset(),
+  barsDataset: barsDataset(30),
+  lineDataset: barsDataset(10),
+  trendingTraits: {
+    fur: {
+      name: 'cross',
+      performance: '12.02%',
+      avgSales: '1.2M'
+    },
+    eyes: {
+      name: 'BORED DAO',
+      performance: '12.02%',
+      avgSales: '1.2M'
+    },
+    mouth: {
+      name: 'cyborg',
+      performance: '12.02%',
+      avgSales: '1.2M'
+    },
+    earing: {
+      name: 'dmt',
+      performance: '12.02%',
+      avgSales: '1.2M'
+    },
+    hat: {
+      name: 'bored unstoppable',
+      performance: '12.02%',
+      avgSales: '1.2M'
+    }
+  }
 }
