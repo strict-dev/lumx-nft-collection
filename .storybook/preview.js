@@ -3,6 +3,7 @@ import * as NextImage from 'next/image';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { RecoilRoot } from 'recoil';
 import { initialize, mswDecorator } from 'msw-storybook-addon';
+import { rest } from 'msw';
 import data from '../src/utils/mock';
 
 initialize();
@@ -41,14 +42,12 @@ export const parameters = {
   },
   viewMode: 'docs',
   msw: {
-    handlers: {
-      auth: [
-         rest.get('/api/collections', (req, res, ctx) => {
-            return res(
-              ctx.json(data)
-            )
-         }),
-      ],
-    }
+    handlers: [
+      rest.get('/api/collections', (req, res, ctx) => {
+        return res(
+          ctx.json(data)
+        )
+    }),
+  ]
  }
 }
