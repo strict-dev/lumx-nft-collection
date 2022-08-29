@@ -92,6 +92,9 @@ Vercel Deploy
 
 - [Click here to go to deploy](https://lumx-nft-collection-dashboard.vercel.app/)
 
+Storybook Deploy
+
+  - [Storybook Deploy](https://lumx-nft-storybook-rafae2k.vercel.app/)
 
 ### Prerequisites
 
