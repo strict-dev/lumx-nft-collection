@@ -21,7 +21,7 @@ const CollectionInfo = () => {
 
   return (
     <Container className="pt-20 ">
-      <CardWrapper className="mb-14">
+      <CardWrapper>
         <div className="relative flex items-center justify-between gap-2 pb-4">
           <div className="flex items-center justify-between gap-2">
             <Image src={UserPhoto} alt="User" width={32} height={32} />
