@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<Chart /> should render the heading 1`] = `
-<canvas
-  height="150"
-  role="img"
-  width="300"
-/>
-`;
