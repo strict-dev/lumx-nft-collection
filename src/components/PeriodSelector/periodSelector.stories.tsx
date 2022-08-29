@@ -7,8 +7,6 @@ export default {
   component: PeriodSelector
 } as ComponentMeta<typeof PeriodSelector>
 
-const Template: ComponentStory<typeof PeriodSelector> = (args) => (
-  <PeriodSelector />
-)
+const Template: ComponentStory<typeof PeriodSelector> = () => <PeriodSelector />
 
 export const Default = Template.bind({})
