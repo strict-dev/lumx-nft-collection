@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const Header = () => {
   return (
-    <header className="fixed z-50 flex items-center justify-between w-full p-4 mb-6 border-b h-14 bg-neutral-800 border-b-neutral-700">
+    <header className="fixed z-50 flex items-center justify-between w-full max-w-sm p-4 mb-6 border-b h-14 bg-neutral-800 border-b-neutral-700">
       <div className="flex items-center justify-between gap-4">
         <Image src={Logo} alt="Logo" width={24} height={24} layout="fixed" />
         <div className="flex gap-1">
