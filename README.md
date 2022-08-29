@@ -134,16 +134,17 @@ This project use `pnpm` as package manager.
   - [x] Period Selector
   - [x] Sales card
 
-- Pages (this is an SPA application 😅)
+- Pages (this is a SPA application 😅)
   - [x] Home
 
 - Api
   - [x] /api/collection (get collection info)
 
-  __Note:__ nextjs api route to fetch mocked data to simulate a real api
+  __Note:__ Nextjs api route to fetch mocked data to simulate a real api
 
 ## Issues
 
+- There's some Layout shift when the page is loaded, this is because the page is rendered with Loader skeleton component that need some refinement on the layout. It's affects the CLS Web Vitals score.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
