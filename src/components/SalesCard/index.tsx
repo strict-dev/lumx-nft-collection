@@ -1,10 +1,10 @@
 import CardWrapper from 'components/CardWrapper'
-import Chart from 'components/Chart'
 import Container from 'components/Container'
+import { Loader } from 'components/Loader'
 import { useData } from 'hooks/useData'
 import { useState } from 'react'
-
-import { ChartLoader } from './Loader'
+import { Chart } from 'react-chartjs-2'
+import { chartOptions } from 'utils/chartUtils'
 
 const SalesCard = () => {
   const [period, setPeriod] = useState<'24h' | '7d'>('24h')
@@ -48,16 +48,74 @@ const SalesCard = () => {
       </CardWrapper>
 
       {isLoading ? (
-        <ChartLoader />
+        <Loader size="h-64" />
       ) : (
         <CardWrapper className="flex flex-col gap-5 mb-2">
-          <Chart
-            dataset={
-              period === '24h' ? data?.scatterDataset1 : data?.scatterDataset2
-            }
-            type="scatter"
-          />
-          <Chart dataset={data?.barsDataset} type="bar" />
+          <div className="w-full h-32">
+            <Chart
+              type="scatter"
+              options={{
+                scales: {
+                  x: {
+                    grid: {
+                      display: false
+                    },
+                    display: false
+                  },
+                  y: {
+                    grid: {
+                      color: '#4E4B66'
+                    },
+                    ticks: {
+                      font: {
+                        size: 12,
+                        weight: 'bold'
+                      },
+                      maxTicksLimit: 6
+                    }
+                  }
+                },
+                plugins: {
+                  legend: {
+                    display: false
+                  }
+                },
+                maintainAspectRatio: false
+              }}
+              data={{
+                datasets: [
+                  {
+                    data: [
+                      ...(data?.scatterDataset1 as Array<{
+                        x: number
+                        y: number
+                      }>)
+                    ],
+                    backgroundColor: 'rgba(255, 99, 132, 1)'
+                  }
+                ]
+              }}
+            />
+          </div>
+
+          <div className="flex items-center h-8">
+            <Chart
+              type="bar"
+              options={{
+                ...chartOptions,
+                maintainAspectRatio: false
+              }}
+              data={{
+                labels: [...(data?.barsDataset?.x as number[])],
+                datasets: [
+                  {
+                    data: [...(data?.barsDataset.y as Array<number>)],
+                    backgroundColor: '#D9DBE9'
+                  }
+                ]
+              }}
+            />
+          </div>
         </CardWrapper>
       )}
     </Container>
