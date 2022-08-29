@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Search /> should render the heading 1`] = `
+<button
+  class="flex items-center px-3 py-1 rounded-sm transition
+      
+      focus-within:outline focus-within:outline-neutral-700"
+>
+  <span
+    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 24px; height: 24px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"
+  >
+    <img
+      alt="Search"
+      data-nimg="fixed"
+      decoding="async"
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+    />
+    <noscript />
+  </span>
+  <input
+    class="px-3 bg-transparent w-36 outline-none transition : ;
+        hidden"
+    placeholder="Search"
+    type="text"
+  />
+</button>
+`;
