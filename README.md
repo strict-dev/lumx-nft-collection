@@ -126,18 +126,19 @@ This project use `pnpm` as package manager.
 ## Roadmap
 
 - Components
-  [x] Collection Info
-  [x] Header
-  [x] Hyper Trend
-  [x] Loader
-  [x] Period Selector
-  [x] Sales card
+
+  - [x] Collection Info
+  - [x] Header
+  - [x] Hyper Trend
+  - [x] Loader
+  - [x] Period Selector
+  - [x] Sales card
 
 - Pages (this is an SPA application 😅)
-  [x] Home
+  - [x] Home
 
 - Api
-  [x] /api/collection (get collection info)
+  - [x] /api/collection (get collection info)
 
   __Note:__ nextjs api route to fetch mocked data to simulate a real api
 
